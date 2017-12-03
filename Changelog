@@ -1,0 +1,22 @@
+Sun Mar 28 10:51:17 2010  dean gaudet <dean@arctic.org>
+
+        * randomio.c: patch for uncached IO on OSX
+                      from Jeffrey Baker <jwbaker@gmail.com>
+
+Wed Aug 29 10:59:43 2007  dean gaudet <dean@arctic.org>
+
+	* randomio.c: larger fields for benchmarking NVRAM cards
+	* randomio.c: support optional 7th argument for selecting
+	              number of samples.
+
+Mon Dec  4 17:19:55 2006  dean gaudet <dean@arctic.org>
+	
+	* randomio.c: correctly compute standard deviation
+
+Fri Nov 10 22:13:16 2006  dean gaudet <dean@arctic.org>
+
+	* randomio.c: portability tweaks for NetBSD.  added some comments.
+
+Fri Nov 10 20:57:00 2006  dean gaudet <dean@arctic.org>
+
+	* randomio.c: initial release.

@@ -1,11 +1,8 @@
-# randomio
-This is a multithreaded disk i/o microbenchmark from http://www.arctic.org/~dean/randomio/
-
-Requires O_DIRECT, pread/pwrite, and pthreads.
+this is a multithreaded disk i/o microbenchmark.  it requires O_DIRECT,
+pread/pwrite, and pthreads.
 
 WARNING: this will destroy data if used incorrectly.
 
-```
 usage: ./randomio filename nr_threads write_fraction_of_io fsync_fraction_of_writes io_size nr_seconds_between_samples
 
 filename
@@ -18,18 +15,17 @@ write_fraction_of_io
 fsync_fraction_of_writes
         what fraction of writes should be fsync'd.
 
-io_size 
+io_size
         how many bytes to read/write.  must be a positive multiple
         of 512 bytes
 
 nr_seconds_between_samples
         how many seconds to average samples over.  recommended 10 or
         more.
-```
+
 
 for example:
 
-```
 % ./randomio /dev/sdb 8 0.5 1 4096 10
  total | read:         latency (ms)       | write:        latency (ms)
   iops |  iops   min    avg    max   sdev |  iops   min    avg    max   sdev
@@ -37,5 +33,4 @@ for example:
   86.9 |  43.2   5.9  134.4  494.4   94.2 |  43.7   0.3   49.0  335.9   53.2
   85.4 |  40.9   7.7  146.8  831.4  103.3 |  44.5   0.3   45.2  243.0   44.8
   84.5 |  43.2   4.2  138.4 1126.4  112.5 |  41.3   0.2   46.8  263.2   50.7
-```
 
